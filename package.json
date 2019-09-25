@@ -1,0 +1,20 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "bin": "src/bin/brain-games.js",
+  "description": "A JS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictoriaGershova/frontend-project-lvl1.git"
+  },
+  "author": "Victoria Antonova <gershovavictoria@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictoriaGershova/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/VictoriaGershova/frontend-project-lvl1#readme"
+}
