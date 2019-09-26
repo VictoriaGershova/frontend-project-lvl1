@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
-   },
+  },
   "description": "",
   "main": "index.js",
   "files": [
