@@ -9,7 +9,7 @@ const Color = {
 
 const paintItRed = (string) => `${Color.FgRed}${string}${Color.Reset}`;
 
-const welcome = () => {
+export const welcome = () => {
   console.log('Welcome to the Brain Games!');
 };
 
@@ -17,7 +17,7 @@ const showRules = (rule) => {
   console.log(rule);
 };
 
-const greetingNewPlayer = () => {
+export const greetingNewPlayer = () => {
   gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
 };
