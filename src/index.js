@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import { car, cdr } from '@hexlet/pairs';
 
 let gamerName = '';
 
@@ -22,10 +23,11 @@ export const greetingNewPlayer = () => {
   console.log(`Hello, ${gamerName}!`);
 };
 
-const playBrainGame = (getQuestion, getAnswer) => {
+const playBrainGame = (getQuestionWithAnswer) => {
   for (let i = 0; i < 3; i += 1) {
-    const question = getQuestion();
-    const correctAnswer = getAnswer(question);
+    const pairQuestionAnswer = getQuestionWithAnswer();
+    const question = car(pairQuestionAnswer);
+    const correctAnswer = String(cdr(pairQuestionAnswer));
     const gamerAnswer = readlineSync.question(`Question: ${String(question)}\nYour answer: `);
     if (gamerAnswer === correctAnswer) {
       console.log('Correct!');
@@ -37,9 +39,9 @@ const playBrainGame = (getQuestion, getAnswer) => {
   console.log(`Congratulations, ${gamerName}!`);
 };
 
-export default (getQuestion, getAnswer, rule) => {
+export default (getQuestionWithAnswer, rule) => {
   welcome();
   showRules(rule);
   greetingNewPlayer();
-  playBrainGame(getQuestion, getAnswer);
+  playBrainGame(getQuestionWithAnswer);
 };
