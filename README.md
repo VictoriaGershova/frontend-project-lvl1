@@ -4,6 +4,10 @@
 
 ### Run brain-even game:
 
+![Alt Text](assets/gif/brain-even.gif)
+
 ### Run brain-calc game:
+
+![Alt Text](assets/gif/brain-calc.gif)
 
 ### Run brain-gcd game:
