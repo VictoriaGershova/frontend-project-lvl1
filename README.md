@@ -2,26 +2,51 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/31ff220e6b5875839b96/test_coverage)](https://codeclimate.com/github/VictoriaGershova/frontend-project-lvl1/test_coverage)
 [![Build Status](https://travis-ci.org/VictoriaGershova/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/VictoriaGershova/frontend-project-lvl1)
 
-### Setup:
+### Global setup
 
-`make install`
+![Alt Text](assets/gif/global-setup.gif)
 
-### Run brain-even game:
+## brain-even
+### Win game:
 
 ![Alt Text](assets/gif/brain-even.gif)
 
-### Run brain-calc game:
+### Fail:
+
+![Alt Text](assets/gif/brain-even-fail.gif)
+
+## brain-calc
+### Win game:
 
 ![Alt Text](assets/gif/brain-calc.gif)
 
-### Run brain-gcd game:
+### Fail:
+
+![Alt Text](assets/gif/brain-calc-fail.gif)
+
+## brain-gcd
+### Win game:
 
 ![Alt Text](assets/gif/brain-gcd.gif)
 
-### Run brain-progression game:
+### Fail:
+
+![Alt Text](assets/gif/brain-gcd-fail.gif)
+
+## brain-progression
+### Win game:
 
 ![Alt Text](assets/gif/brain-progression.gif)
 
-### Run brain-prime game:
+### Fail: 
+
+![Alt Text](assets/gif/brain-progression-fail.gif)
+
+## brain-prime
+### Win game:
 
 ![Alt Text](assets/gif/brain-prime.gif)
+
+### Fail:
+
+![Alt Text](assets/gif/brain-prime-fail.gif)

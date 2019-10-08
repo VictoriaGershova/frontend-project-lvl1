@@ -9,7 +9,12 @@
     "brain-progression": "dist/bin/brain-progression.js",
     "brain-prime": "dist/bin/brain-prime.js"
   },
-  "description": "",
+  "description": "JS project",
+  "keywords": [
+    "JS",
+    "Brain-games",
+    "Games"
+  ],
   "main": "index.js",
   "files": [
     "dist"
