@@ -21,3 +21,7 @@
 ### Run brain-progression game:
 
 ![Alt Text](assets/gif/brain-progression.gif)
+
+### Run brain-prime game:
+
+![Alt Text](assets/gif/brain-prime.gif)
