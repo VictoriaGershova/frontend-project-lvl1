@@ -3,7 +3,7 @@ import runBrainGame from '..';
 
 const ansYes = 'yes';
 const ansNo = 'no';
-const rule = `Answer ${ansYes} if given number is prime. Otherwise answer ${ansNo}`;
+const gameDescription = `Answer ${ansYes} if given number is prime. Otherwise answer ${ansNo}`;
 
 const isPrimeNumber = (num) => {
   for (let factor = 2; factor < num; factor += 1) {
@@ -21,5 +21,5 @@ const getNumIsPrime = () => {
 };
 
 export default () => {
-  runBrainGame(getNumIsPrime, rule);
+  runBrainGame(getNumIsPrime, gameDescription);
 };

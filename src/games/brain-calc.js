@@ -9,7 +9,7 @@ const operators = [
   cons('*', (a, b) => a * b),
 ];
 
-const rule = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
 const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
 
@@ -21,5 +21,5 @@ const getOperationWithAnswer = () => {
 };
 
 export default () => {
-  runBrainGame(getOperationWithAnswer, rule);
+  runBrainGame(getOperationWithAnswer, gameDescription);
 };

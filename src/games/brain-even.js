@@ -3,7 +3,7 @@ import runBrainGame from '..';
 
 const ansYes = 'yes';
 const ansNo = 'no';
-const rule = `Answer ${ansYes} if the number is even, otherwise answer ${ansNo}.`;
+const gameDescription = `Answer ${ansYes} if the number is even, otherwise answer ${ansNo}.`;
 
 const getNumIsEven = () => {
   const num = Math.round(Math.random() * 100);
@@ -12,5 +12,5 @@ const getNumIsEven = () => {
 };
 
 export default () => {
-  runBrainGame(getNumIsEven, rule);
+  runBrainGame(getNumIsEven, gameDescription);
 };

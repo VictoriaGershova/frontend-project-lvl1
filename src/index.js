@@ -14,8 +14,8 @@ export const welcome = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-const showRules = (rule) => {
-  console.log(rule);
+const showGameDescription = (gameDescription) => {
+  console.log(gameDescription);
 };
 
 export const greetingNewPlayer = () => {
@@ -39,9 +39,9 @@ const playBrainGame = (getQuestionWithAnswer) => {
   console.log(`Congratulations, ${gamerName}!`);
 };
 
-export default (getQuestionWithAnswer, rule) => {
+export default (getQuestionWithAnswer, gameDescription) => {
   welcome();
-  showRules(rule);
+  showGameDescription(gameDescription);
   greetingNewPlayer();
   playBrainGame(getQuestionWithAnswer);
 };

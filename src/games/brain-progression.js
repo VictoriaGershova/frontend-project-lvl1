@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import runBrainGame from '..';
 
-const rule = 'What number is missing in the progression?';
+const gameDescription = 'What number is missing in the progression?';
 
 const randomArithmeticProgression = () => {
   const dif = Math.floor(Math.random() * 11);
@@ -28,5 +28,5 @@ const getPrograssionQuestion = () => {
 };
 
 export default () => {
-  runBrainGame(getPrograssionQuestion, rule);
+  runBrainGame(getPrograssionQuestion, gameDescription);
 };

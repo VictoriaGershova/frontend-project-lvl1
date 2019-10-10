@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import runBrainGame from '..';
 
-const rule = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   if (b === 0) {
@@ -17,5 +17,5 @@ const getNumbersWithGcd = () => {
 };
 
 export default () => {
-  runBrainGame(getNumbersWithGcd, rule);
+  runBrainGame(getNumbersWithGcd, gameDescription);
 };
