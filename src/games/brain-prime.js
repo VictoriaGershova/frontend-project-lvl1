@@ -1,9 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import runBrainGame from '..';
 
-const ansYes = 'yes';
-const ansNo = 'no';
-const gameDescription = `Answer ${ansYes} if given number is prime. Otherwise answer ${ansNo}`;
+const gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
 
 const isPrime = (num) => {
   for (let factor = 2; factor <= num / 2; factor += 1) {
@@ -16,7 +14,7 @@ const isPrime = (num) => {
 
 const getNumIsPrime = () => {
   const num = Math.floor(Math.random() * 100) + 1;
-  return cons(num, isPrime(num) ? ansYes : ansNo);
+  return cons(num, isPrime(num) ? 'yes' : 'no');
 };
 
 export default () => {
