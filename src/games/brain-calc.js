@@ -1,7 +1,7 @@
 import {
   cons, car, cdr,
 } from '@hexlet/pairs';
-import runBrainGame from '../index';
+import runBrainGame from '..';
 
 const operators = [
   cons('+', (a, b) => a + b),

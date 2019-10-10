@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import runBrainGame from '../index';
+import runBrainGame from '..';
 
 const ansYes = 'yes';
 const ansNo = 'no';

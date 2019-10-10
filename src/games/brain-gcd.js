@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import runBrainGame from '../index';
+import runBrainGame from '..';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
