@@ -11,10 +11,8 @@ const operators = [
 
 const gameDescription = 'What is the result of the expression?';
 
-const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
-
 const getOperationWithAnswer = () => {
-  const operator = getRandomOperator();
+  const operator = operators[Math.floor(Math.random() * operators.length)];
   const leftOperand = Math.round(Math.random() * 100);
   const rightOperand = Math.round(Math.random() * 100);
   return cons(`${leftOperand} ${car(operator)} ${rightOperand}`, cdr(operator)(leftOperand, rightOperand));
