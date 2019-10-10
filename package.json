@@ -15,7 +15,6 @@
     "Brain-games",
     "Games"
   ],
-  "main": "index.js",
   "files": [
     "dist"
   ],
