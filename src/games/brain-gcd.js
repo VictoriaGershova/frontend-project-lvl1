@@ -3,19 +3,19 @@ import runBrainGame from '../index';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const getGCD = (a, b) => {
+const getGcd = (a, b) => {
   if (b === 0) {
     return a;
   }
-  return getGCD(b, a % b);
+  return getGcd(b, a % b);
 };
 
-const getNumbersWithGCD = () => {
+const getNumbersWithGcd = () => {
   const firstNum = Math.round(Math.random() * 100);
   const secondNum = Math.round(Math.random() * 100);
-  return cons(`${firstNum} ${secondNum}`, getGCD(firstNum, secondNum));
+  return cons(`${firstNum} ${secondNum}`, getGcd(firstNum, secondNum));
 };
 
 export default () => {
-  runBrainGame(getNumbersWithGCD, rule);
+  runBrainGame(getNumbersWithGcd, rule);
 };
