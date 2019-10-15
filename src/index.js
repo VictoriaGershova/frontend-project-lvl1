@@ -10,38 +10,32 @@ const Color = {
 
 const paintItRed = (string) => `${Color.FgRed}${string}${Color.Reset}`;
 
-export const welcome = () => {
+const isEmptyGame = (getQuestionWithAnswer) => getQuestionWithAnswer === null;
+
+const greetingGamer = (gameDescription) => {
   console.log('Welcome to the Brain Games!');
-};
-
-const showGameDescription = (gameDescription) => {
-  console.log(gameDescription);
-};
-
-export const greetingNewPlayer = () => {
+  if (gameDescription !== null) {
+    console.log(gameDescription);
+  }
   gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
 };
 
-const playBrainGame = (getQuestionWithAnswer) => {
-  for (let i = 0; i < 3; i += 1) {
-    const pairQuestionAnswer = getQuestionWithAnswer();
-    const question = car(pairQuestionAnswer);
-    const correctAnswer = String(cdr(pairQuestionAnswer));
-    const gamerAnswer = readlineSync.question(`Question: ${String(question)}\nYour answer: `);
-    if (gamerAnswer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${paintItRed(gamerAnswer)}' is wrong answer ;(. Correct answer was '${paintItRed(correctAnswer)}'.\nLet's try again, ${gamerName}`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${gamerName}!`);
-};
-
 export default (getQuestionWithAnswer, gameDescription) => {
-  welcome();
-  showGameDescription(gameDescription);
-  greetingNewPlayer();
-  playBrainGame(getQuestionWithAnswer);
+  greetingGamer(gameDescription);
+  if (!isEmptyGame(getQuestionWithAnswer)) {
+    for (let i = 0; i < 3; i += 1) {
+      const pairQuestionAnswer = getQuestionWithAnswer();
+      const question = car(pairQuestionAnswer);
+      const correctAnswer = String(cdr(pairQuestionAnswer));
+      const gamerAnswer = readlineSync.question(`Question: ${String(question)}\nYour answer: `);
+      if (gamerAnswer === correctAnswer) {
+        console.log('Correct!');
+      } else {
+        console.log(`'${paintItRed(gamerAnswer)}' is wrong answer ;(. Correct answer was '${paintItRed(correctAnswer)}'.\nLet's try again, ${gamerName}`);
+        return;
+      }
+    }
+    console.log(`Congratulations, ${gamerName}!`);
+  }
 };

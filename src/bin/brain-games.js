@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { greetingNewPlayer, welcome } from '..';
+import runBrainGame from '..';
 
-welcome();
-greetingNewPlayer();
+runBrainGame(null, null);

@@ -4,21 +4,25 @@ import {
 import getRandomNum from '../utils/math-utils';
 import runBrainGame from '..';
 
+const gameDescription = 'What is the result of the expression?';
+let question = '';
+let answer = '';
+
 const operators = [
   cons('+', (a, b) => a + b),
   cons('-', (a, b) => a - b),
   cons('*', (a, b) => a * b),
 ];
 
-const gameDescription = 'What is the result of the expression?';
-
-const getOperationWithAnswer = () => {
+const makeQuestionWithAnswer = () => {
   const operator = operators[getRandomNum(0, operators.length - 1)];
   const leftOperand = getRandomNum(0, 100);
   const rightOperand = getRandomNum(0, 100);
-  return cons(`${leftOperand} ${car(operator)} ${rightOperand}`, cdr(operator)(leftOperand, rightOperand));
+  question = `${leftOperand} ${car(operator)} ${rightOperand}`;
+  answer = cdr(operator)(leftOperand, rightOperand);
+  return cons(question, answer);
 };
 
 export default () => {
-  runBrainGame(getOperationWithAnswer, gameDescription);
+  runBrainGame(makeQuestionWithAnswer, gameDescription);
 };
