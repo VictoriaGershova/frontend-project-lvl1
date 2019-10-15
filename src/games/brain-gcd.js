@@ -11,9 +11,9 @@ const getGcd = (a, b) => {
 };
 
 const getNumbersWithGcd = () => {
-  const firstNum = Math.round(Math.random() * 100);
-  const secondNum = Math.round(Math.random() * 100);
-  return cons(`${firstNum} ${secondNum}`, getGcd(firstNum, secondNum));
+  const firstOperand = Math.round(Math.random() * 100);
+  const secondOperand = Math.round(Math.random() * 100);
+  return cons(`${firstOperand} ${secondOperand}`, getGcd(firstOperand, secondOperand));
 };
 
 export default () => {
