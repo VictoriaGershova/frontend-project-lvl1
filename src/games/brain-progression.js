@@ -2,6 +2,7 @@ import { cons } from '@hexlet/pairs';
 import runBrainGame from '..';
 
 const gameDescription = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const randomArithmeticProgression = (length) => {
   const diff = Math.floor(Math.random() * 11);
@@ -14,10 +15,10 @@ const randomArithmeticProgression = (length) => {
 };
 
 const getPrograssionQuestion = () => {
-  const progression = randomArithmeticProgression(10);
+  const progression = randomArithmeticProgression(progressionLength);
   const randTermInd = Math.floor(Math.random() * 10);
   let question = '';
-  for (let i = 0; i < progression.length; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === randTermInd) {
       question = `${question} ..`;
     } else {
