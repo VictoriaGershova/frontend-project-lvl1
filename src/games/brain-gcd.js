@@ -1,4 +1,5 @@
 import { cons } from '@hexlet/pairs';
+import getRandomNum from '../utils/math-utils';
 import runBrainGame from '..';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -11,8 +12,8 @@ const getGcd = (a, b) => {
 };
 
 const getNumbersWithGcd = () => {
-  const firstOperand = Math.round(Math.random() * 100);
-  const secondOperand = Math.round(Math.random() * 100);
+  const firstOperand = getRandomNum(1, 100);
+  const secondOperand = getRandomNum(1, 100);
   return cons(`${firstOperand} ${secondOperand}`, getGcd(firstOperand, secondOperand));
 };
 
