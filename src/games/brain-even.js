@@ -1,12 +1,13 @@
 import { cons } from '@hexlet/pairs';
 import runBrainGame from '..';
 
-const gameDescription = "Answer 'yes' if the number is even, otherwise answer 'yes'.";
+const gameDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
+const isEven = (num) => num % 2 === 0;
 
 const getNumIsEven = () => {
   const num = Math.round(Math.random() * 100);
-  const isEven = num % 2 === 0 ? 'yes' : 'no';
-  return cons(num, isEven);
+  return cons(num, (isEven(num) ? 'yes' : 'no'));
 };
 
 export default () => {
