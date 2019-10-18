@@ -4,8 +4,6 @@ import runBrainGame from '..';
 
 const gameDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
-let question = '';
-let answer = '';
 
 const randomArithmeticProgression = (length) => {
   const diff = getRandomNum(1, 10);
@@ -20,7 +18,7 @@ const randomArithmeticProgression = (length) => {
 const makeQuestionWithAnswer = () => {
   const progression = randomArithmeticProgression(progressionLength);
   const randTermInd = getRandomNum(0, progressionLength - 1);
-  question = '';
+  let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === randTermInd) {
       question = `${question} ..`;
@@ -28,7 +26,7 @@ const makeQuestionWithAnswer = () => {
       question = `${question} ${progression[i]}`;
     }
   }
-  answer = progression[randTermInd];
+  const answer = progression[randTermInd];
   return cons(question, answer);
 };
 
