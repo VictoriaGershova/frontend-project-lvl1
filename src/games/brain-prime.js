@@ -14,9 +14,8 @@ const isPrime = (num) => {
 };
 
 const makeQuestionWithAnswer = () => {
-  const num = getRandomNum(1, 100);
-  const question = num;
-  const answer = isPrime(num) ? 'yes' : 'no';
+  const question = getRandomNum(1, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
   return cons(question, answer);
 };
 
