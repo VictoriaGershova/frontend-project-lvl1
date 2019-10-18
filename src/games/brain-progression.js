@@ -7,10 +7,10 @@ const progressionLength = 10;
 
 const randomArithmeticProgression = (length) => {
   const diff = getRandomNum(1, 10);
-  const firstNum = getRandomNum(0, 10);
+  const firstTerm = getRandomNum(0, 10);
   const progression = [];
   for (let i = 0; i < length; i += 1) {
-    progression.push(firstNum + diff * i);
+    progression.push(firstTerm + diff * i);
   }
   return progression;
 };
