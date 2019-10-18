@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { car, cdr, isPair } from '@hexlet/pairs';
 
-const gameSteps = 3;
+const stepsCount = 3;
 let gamerName = '';
 let pairQuestionAnswer = null;
 let question = '';
@@ -15,31 +15,20 @@ const Color = {
 
 const paintItRed = (string) => `${Color.FgRed}${string}${Color.Reset}`;
 
-const isValidFunction = (getQuestionWithAnswer) => (
-  typeof getQuestionWithAnswer === 'function' && isPair(getQuestionWithAnswer())
-);
-
-const isEmptyDescription = (gameDescription) => (
-  gameDescription === null || gameDescription === ''
-);
-
-const greetingGamer = (gameDescription) => {
+export default (getQuestionWithAnswer, gameDescription = '') => {
   console.log('Welcome to the Brain Games!');
-  if (!isEmptyDescription(gameDescription)) {
+  if (gameDescription !== null && gameDescription !== '') {
     console.log(gameDescription);
   }
   gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
-};
-
-export default (getQuestionWithAnswer, gameDescription = '') => {
-  greetingGamer(gameDescription);
-  if (isValidFunction(getQuestionWithAnswer)) {
-    for (let i = 0; i < gameSteps; i += 1) {
+  if (typeof getQuestionWithAnswer === 'function' && isPair(getQuestionWithAnswer())) {
+    for (let i = 0; i < stepsCount; i += 1) {
       pairQuestionAnswer = getQuestionWithAnswer();
       question = car(pairQuestionAnswer);
       correctAnswer = String(cdr(pairQuestionAnswer));
-      gamerAnswer = readlineSync.question(`Question: ${String(question)}\nYour answer: `);
+      console.log(`Question: ${String(question)}`);
+      gamerAnswer = readlineSync.question('Your answer: ');
       if (gamerAnswer === correctAnswer) {
         console.log('Correct!');
       } else {
