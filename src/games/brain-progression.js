@@ -17,16 +17,16 @@ const makeQuestionWithAnswer = () => {
   const diff = getRandomNum(1, 10);
   const firstTerm = getRandomNum(0, 10);
   const progression = randomArithmeticProgression(firstTerm, diff, progressionLength);
-  const skipTermInd = getRandomNum(0, progressionLength - 1);
+  const hiddenTermIndex = getRandomNum(0, progressionLength - 1);
   let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    if (i === skipTermInd) {
+    if (i === hiddenTermIndex) {
       question = `${question} ..`;
     } else {
       question = `${question} ${progression[i]}`;
     }
   }
-  const answer = progression[skipTermInd];
+  const answer = progression[hiddenTermIndex];
   return cons(question, answer);
 };
 
