@@ -15,7 +15,7 @@ const Color = {
 
 const paintItRed = (string) => `${Color.FgRed}${string}${Color.Reset}`;
 
-export default (getQuestionWithAnswer, gameDescription = '') => {
+export default (getQuestionWithAnswer, gameDescription) => {
   console.log('Welcome to the Brain Games!');
   if (gameDescription !== null && gameDescription !== '') {
     console.log(gameDescription);
