@@ -1,7 +1,7 @@
 import {
   cons, car, cdr,
 } from '@hexlet/pairs';
-import getRandomNum from '../utils/math-utils';
+import getRandomNum from '../utils';
 import runBrainGame from '..';
 
 const gameDescription = 'What is the result of the expression?';
