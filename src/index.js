@@ -3,7 +3,7 @@ import { car, cdr, isPair } from '@hexlet/pairs';
 
 const stepsCount = 3;
 let gamerName = '';
-let pairQuestionAnswer = null;
+let questionAnswer = null;
 let question = '';
 let correctAnswer = '';
 let gamerAnswer = '';
@@ -24,9 +24,9 @@ export default (getQuestionWithAnswer, gameDescription) => {
   console.log(`Hello, ${gamerName}!`);
   if (typeof getQuestionWithAnswer === 'function' && isPair(getQuestionWithAnswer())) {
     for (let i = 0; i < stepsCount; i += 1) {
-      pairQuestionAnswer = getQuestionWithAnswer();
-      question = car(pairQuestionAnswer);
-      correctAnswer = String(cdr(pairQuestionAnswer));
+      questionAnswer = getQuestionWithAnswer();
+      question = car(questionAnswer);
+      correctAnswer = String(cdr(questionAnswer));
       console.log(`Question: ${String(question)}`);
       gamerAnswer = readlineSync.question('Your answer: ');
       if (gamerAnswer === correctAnswer) {
