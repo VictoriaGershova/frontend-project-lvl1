@@ -32,7 +32,8 @@ export default (getQuestionWithAnswer, gameDescription) => {
       if (gamerAnswer === correctAnswer) {
         console.log('Correct!');
       } else {
-        console.log(`'${paintItRed(gamerAnswer)}' is wrong answer ;(. Correct answer was '${paintItRed(correctAnswer)}'.\nLet's try again, ${gamerName}`);
+        console.log(`'${paintItRed(gamerAnswer)}' is wrong answer ;(.`);
+        console.log(`Correct answer was '${paintItRed(correctAnswer)}'.\nLet's try again, ${gamerName}!`);
         return;
       }
     }
