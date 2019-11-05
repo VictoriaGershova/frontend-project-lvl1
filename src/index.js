@@ -2,11 +2,6 @@ import readlineSync from 'readline-sync';
 import { car, cdr, isPair } from '@hexlet/pairs';
 
 const stepsCount = 3;
-let gamerName = '';
-let questionAnswer = null;
-let question = '';
-let correctAnswer = '';
-let gamerAnswer = '';
 
 const Color = {
   Reset: '\x1b[0m',
@@ -20,15 +15,15 @@ export default (getQuestionWithAnswer, gameDescription) => {
   if (gameDescription !== null && gameDescription !== '') {
     console.log(gameDescription);
   }
-  gamerName = readlineSync.question('May I have your name? ');
+  const gamerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${gamerName}!`);
   if (typeof getQuestionWithAnswer === 'function' && isPair(getQuestionWithAnswer())) {
     for (let i = 0; i < stepsCount; i += 1) {
-      questionAnswer = getQuestionWithAnswer();
-      question = car(questionAnswer);
-      correctAnswer = String(cdr(questionAnswer));
+      const questionAnswer = getQuestionWithAnswer();
+      const question = car(questionAnswer);
+      const correctAnswer = String(cdr(questionAnswer));
       console.log(`Question: ${String(question)}`);
-      gamerAnswer = readlineSync.question('Your answer: ');
+      const gamerAnswer = readlineSync.question('Your answer: ');
       if (gamerAnswer === correctAnswer) {
         console.log('Correct!');
       } else {
