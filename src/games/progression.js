@@ -19,12 +19,8 @@ const makeQuestionWithAnswer = () => {
   const progression = makeProgression(firstTerm, diff, progressionLength);
   const hiddenTermIndex = getRandomNum(0, progressionLength - 1);
   let question = '';
-  for (let i = 0; i < progressionLength; i += 1) {
-    if (i === hiddenTermIndex) {
-      question = `${question} ..`;
-    } else {
-      question = `${question} ${progression[i]}`;
-    }
+  for (let i = 0; i < progressionLength; (i += 1, question = `${question} `)) {
+    question = (i === hiddenTermIndex) ? `${question}..` : question = `${question}${progression[i]}`;
   }
   const answer = progression[hiddenTermIndex];
   return cons(question, answer);
